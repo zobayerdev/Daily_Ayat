@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_notification:
                 // startActivity(new Intent(MainActivity.this, AdminActivity.class));
                 Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
-               // startActivity(new Intent(MainActivity.this, AddTeacherActivity.class));
+                startActivity(new Intent(MainActivity.this, FullNotificationActivity.class));
                 break;
 
             case R.id.nav_developer:

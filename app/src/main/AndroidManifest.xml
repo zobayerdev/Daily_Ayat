@@ -18,6 +18,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
+        <activity android:name=".DetailsNotiActivity"
+            android:exported="false"
+            android:parentActivityName=".FullNotificationActivity"
+            />
+
+        <activity android:name=".FullNotificationActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            />
+
         <activity android:name=".FullDataActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"

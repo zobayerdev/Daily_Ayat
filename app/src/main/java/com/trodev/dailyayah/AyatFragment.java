@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +29,7 @@ public class AyatFragment extends Fragment {
     private List<UploadAllAyats> list1;
     private AyatAdapter adapter;
     private DatabaseReference reference, dbRef;
+    private ProgressBar progressBar;
 
 
     public AyatFragment() {
@@ -43,6 +45,9 @@ public class AyatFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_ayat, container, false);
 
         ayatRv = view.findViewById(R.id.ayatRv);
+
+        progressBar = view.findViewById(R.id.progress_circular);
+        progressBar.setVisibility(View.VISIBLE);
 
         reference = FirebaseDatabase.getInstance().getReference().child("Daily Ayahs");
 
@@ -61,12 +66,14 @@ public class AyatFragment extends Fragment {
                 if(!dataSnapshot.exists())
                 {
                     // progressDialog.show();
+                    progressBar.setVisibility(View.INVISIBLE);
                     ayatRv.setVisibility(View.VISIBLE); // change
                 }
                 else
                 {
                     // progressDialog.hide();
                     ayatRv.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.INVISIBLE);
                     for (DataSnapshot snapshot: dataSnapshot.getChildren()){
                         UploadAllAyats data = snapshot.getValue(UploadAllAyats.class);
                         list1.add(0,data);
@@ -81,6 +88,7 @@ public class AyatFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // progressDialog.hide();
+                progressBar.setVisibility(View.VISIBLE);
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
