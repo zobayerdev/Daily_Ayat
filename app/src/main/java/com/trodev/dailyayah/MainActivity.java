@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.onesignal.OneSignal;
 
 import java.util.Objects;
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private long pressedTime;
 
+    private static final String ONESIGNAL_APP_ID = "6c25722b-8dba-4e32-b0d2-747f07c52f10";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
+
+        // Enable verbose OneSignal logging to debug issues if needed.
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+        // OneSignal Initialization
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(ONESIGNAL_APP_ID);
+
+        // promptForPushNotifications will show the native Android notification permission prompt.
+        // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 7)
+        OneSignal.promptForPushNotifications();
 
 
         // #######################

@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment {
 
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     UploadData uploadData1 = postSnapshot.getValue(UploadData.class);
-                    uploadData.add(uploadData1);
+                    uploadData.add(0, uploadData1);
                 }
 
                 imageAdapter = new ImageAdapter(getContext(), uploadData);
