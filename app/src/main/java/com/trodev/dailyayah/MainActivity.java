@@ -6,9 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
                 int itemId = item.getItemId();
                 if (itemId == R.id.bottom_menu_home) {
                     loadHomeFragment();
-                }  else if (itemId == R.id.bottom_menu_ayat) {
+                } else if (itemId == R.id.bottom_menu_ayat) {
                     loadAyatFragment();
                 } else if (itemId == R.id.bottom_menu_wallpaper) {
                     loadWallpaperFragment();
-                }else {
+                } else {
                     Toast.makeText(MainActivity.this, "Invalid Click", Toast.LENGTH_SHORT).show();
                 }
                 return true;
@@ -118,18 +126,35 @@ public class MainActivity extends AppCompatActivity {
         }
         switch (item.getItemId()) {
             case R.id.nav_notification:
-                // startActivity(new Intent(MainActivity.this, AdminActivity.class));
                 Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, FullNotificationActivity.class));
                 break;
 
             case R.id.nav_developer:
-                // startActivity(new Intent(MainActivity.this, AdminActivity.class));
+                final Dialog dialog = new Dialog(this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.developer_bottomsheet_layout);
+
+                dialog.show();
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+                dialog.getWindow().setGravity(Gravity.BOTTOM);
                 Toast.makeText(this, "Developer", Toast.LENGTH_SHORT).show();
-                // startActivity(new Intent(MainActivity.this, MakeTeacherActivity.class));
+                break;
+
+            case R.id.nav_apps:
+                Toast.makeText(this, "Our all application", Toast.LENGTH_SHORT).show();
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
+                    Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
+                }
                 break;
 
             case R.id.nav_policy:
+                startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
                 Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
                 break;
         }

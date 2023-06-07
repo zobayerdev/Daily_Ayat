@@ -66,7 +66,6 @@ public class AyatFragment extends Fragment {
                 if(!dataSnapshot.exists())
                 {
                     // progressDialog.show();
-                    progressBar.setVisibility(View.INVISIBLE);
                     ayatRv.setVisibility(View.VISIBLE); // change
                 }
                 else

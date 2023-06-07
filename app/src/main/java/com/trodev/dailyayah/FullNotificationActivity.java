@@ -58,8 +58,6 @@ public class FullNotificationActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list1 = new ArrayList<>();
                 if (!dataSnapshot.exists()) {
-
-                    progressBar.setVisibility(View.INVISIBLE);
                     notiRv.setVisibility(View.VISIBLE); // change
                 } else {
 
