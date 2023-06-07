@@ -33,8 +33,9 @@ Your contributions are always `welcome!`
 [![forthebadge](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/dev?id=6580660399707616800)
  
 <!-- Image board -->
-<!-- <img src="https://github.com/zobayerdev/DIU_Card_Maker/assets/74914169/910d4045-badf-4120-ab2d-cfd72ba6c1ae" width=25% height=25%>
-<img src="https://github.com/zobayerdev/DIU_Card_Maker/assets/74914169/79c3394f-2e4f-4823-9b35-c6fc853b9e45" width=25% height=25%>
-<img src="https://github.com/zobayerdev/DIU_Card_Maker/assets/74914169/53a00f92-1455-4587-b2be-298a77ef16fb" width=25% height=25%>
-<img src="https://github.com/zobayerdev/DIU_Card_Maker/assets/74914169/a32ce03f-853a-4f02-b5a4-edde640b2432" width=25% height=25%>
-<img src="https://github.com/zobayerdev/DIU_Card_Maker/assets/74914169/387a025e-84a8-4927-8c25-1860892f869f" width=25% height=25%> -->
+<img src="https://github.com/zobayerdev/Daily_Ayah/assets/74914169/80dff939-68e9-4c1c-b9ae-e0f0b9ca30fa" width=25% height=25%>
+<img src="https://github.com/zobayerdev/Daily_Ayah/assets/74914169/5cc6a4c8-62b7-440c-8cba-2a52db1bb25f" width=25% height=25%>
+<img src="https://github.com/zobayerdev/Daily_Ayah/assets/74914169/0140ef5d-49c8-42d9-b84d-d974989f133c" width=25% height=25%>
+<img src="https://github.com/zobayerdev/Daily_Ayah/assets/74914169/55e61059-d460-4e86-b38f-5c964a93f40f" width=25% height=25%>
+<img src="https://github.com/zobayerdev/Daily_Ayah/assets/74914169/3ee82074-2dc0-4bb4-89d3-93e7da2c1c9f" width=25% height=25%>
+<img src="https://github.com/zobayerdev/Daily_Ayah/assets/74914169/6f573597-2964-44f8-851d-c83146878270" width=25% height=25%>
