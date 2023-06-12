@@ -26,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 android:src="@drawable/apps_icon" />
 
         </com.google.android.material.card.MaterialCardView>
@@ -106,24 +107,21 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                >
+                android:weightSum="2">
 
                 <ImageView
                     android:id="@+id/copyIv"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_copy"
-                    />
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_copy" />
 
                 <ImageView
                     android:id="@+id/shareIv"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_share"
-                    />
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_share" />
 
             </LinearLayout>
 

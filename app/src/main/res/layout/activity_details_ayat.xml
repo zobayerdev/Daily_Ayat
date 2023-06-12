@@ -48,7 +48,6 @@
                     android:textSize="17sp"
                     />
 
-
                 <TextView
                     android:id="@+id/authorTv"
                     android:layout_width="wrap_content"
