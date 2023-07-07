@@ -19,27 +19,27 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".PrivacyPolicyActivity"
+            android:name=".activities.PrivacyPolicyActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".activities.MainActivity"/>
         <activity
-            android:name=".DetailsNotiActivity"
+            android:name=".activities.DetailsNotiActivity"
             android:exported="false"
-            android:parentActivityName=".FullNotificationActivity" />
+            android:parentActivityName=".activities.FullNotificationActivity" />
         <activity
-            android:name=".FullNotificationActivity"
+            android:name=".activities.FullNotificationActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name=".FullDataActivity"
+            android:name=".activities.FullDataActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name=".DetailsAyatActivity"
+            android:name=".activities.DetailsAyatActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".activities.SplashScreen"
             android:exported="true" >
 
             <intent-filter>
@@ -50,7 +50,7 @@
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false"/>
 
     </application>

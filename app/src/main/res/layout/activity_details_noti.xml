@@ -7,7 +7,7 @@
     android:layout_margin="10dp"
     android:orientation="vertical"
     android:scrollbars="vertical"
-    tools:context=".DetailsNotiActivity">
+    tools:context=".activities.DetailsNotiActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

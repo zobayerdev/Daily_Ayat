@@ -7,7 +7,7 @@
     android:layout_margin="10dp"
     android:orientation="vertical"
     android:scrollbars="vertical"
-    tools:context=".DetailsAyatActivity">
+    tools:context=".activities.DetailsAyatActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

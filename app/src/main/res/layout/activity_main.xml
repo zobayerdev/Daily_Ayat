@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
