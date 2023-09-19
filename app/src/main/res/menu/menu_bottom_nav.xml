@@ -4,19 +4,19 @@
     <item
         android:id="@+id/bottom_menu_home"
         android:fontFamily="@font/mulish_semibold"
-        android:icon="@drawable/ic_home"
-        android:title="Daily Ayah" />
+        android:icon="@drawable/quran"
+        android:title="Quran ayat" />
 
     <item
         android:id="@+id/bottom_menu_ayat"
         android:fontFamily="@font/mulish_semibold"
-        android:icon="@drawable/ic_ayat"
-        android:title="Ayah" />
+        android:icon="@drawable/hadis_script"
+        android:title="Hadith" />
 
     <item
         android:id="@+id/bottom_menu_wallpaper"
         android:fontFamily="@font/mulish_semibold"
-        android:icon="@drawable/ic_wallpaper"
-        android:title="Islamic Wallpaper" />
+        android:icon="@drawable/menu_books"
+        android:title="Islamic Books" />
 
 </menu>

@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:itemTextAppearance="@style/RobotoTextViewStyle"
+            app:itemTextAppearance="@style/bottom_nav_font_style"
             app:menu="@menu/menu_bottom_nav" />
 
     </RelativeLayout>
@@ -36,7 +36,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_menu"
-        app:itemTextAppearance="@style/RobotoTextViewStyle"
+        app:itemTextAppearance="@style/navigation_font_style"
         app:menu="@menu/navigation_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

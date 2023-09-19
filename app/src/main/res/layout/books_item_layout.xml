@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    android:id="@+id/cardView"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/cardView"
     app:cardElevation="5dp">
 
     <LinearLayout
@@ -15,17 +15,17 @@
         android:weightSum="3">
 
         <ImageView
-            android:id="@+id/ayatIV"
+            android:id="@+id/imageIv"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="5dp"
             android:layout_gravity="center"
-            android:src="@drawable/hadis_script" />
+            android:layout_margin="5dp"
+            android:src="@drawable/books" />
 
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:background="@color/green" />
+            android:background="@color/app_color" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,24 +41,15 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/detailsTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/kalpurush"
-                    android:text="আয়াতঃ "
+                    android:text="টাইটেল"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/headTv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/kalpurush"
-                    android:text="হেডলাইন"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
 
 
             </LinearLayout>
@@ -75,19 +66,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
-                    android:text="উৎসঃ "
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:text="বিষয়ঃ "
+                    android:textColor="@color/app_color"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/authorTv"
+                    android:id="@+id/endDateTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
-                    android:text="Author"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:text="ইসলামিক বুক"
+                    android:textColor="@color/app_color"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -104,20 +95,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
-                    android:text="প্রকাশিত তারিখঃ "
-                    android:textColor="@color/green"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:text="স্বত্বাধিকারীঃ- "
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/dateTv"
+                    android:id="@+id/sourceTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/kalpurush"
-                    android:text="০১/০১/২০২৩"
-                    android:textColor="@color/green"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/mulish_semibold"
+                    android:text="Daily Ayat "
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -129,8 +118,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/ic_right_arrow" />
+            android:src="@drawable/ic_show"
+            app:tint="@color/app_color" />
 
     </LinearLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>

@@ -16,5 +16,5 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
     }
 }
-rootProject.name = "Daily Ayah"
+rootProject.name = "Daily Ayat"
 include ':app'
