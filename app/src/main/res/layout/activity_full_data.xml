@@ -61,8 +61,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
                     android:text="Ayah"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
 
@@ -73,6 +74,7 @@
                     android:layout_gravity="right"
                     android:fontFamily="@font/kalpurush"
                     android:text="Author"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
