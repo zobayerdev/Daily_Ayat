@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,7 +32,8 @@ public class HomeFragment extends Fragment {
     private ImageAdapter imageAdapter;
     private DatabaseReference databaseReference;
     private List<UploadData> uploadData;
-    private ProgressBar progressBar;
+
+    LottieAnimationView animationView;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -42,9 +44,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
 
-        progressBar = view.findViewById(R.id.progress_circular);
-
-        progressBar.setVisibility(View.VISIBLE);
+        animationView = view.findViewById(R.id.animationView);
+        animationView.loop(true);
 
         recRV = view.findViewById(R.id.recRV);
         recRV.setHasFixedSize(true);
@@ -64,7 +65,7 @@ public class HomeFragment extends Fragment {
 
                 imageAdapter = new ImageAdapter(getContext(), uploadData);
                 recRV.setAdapter(imageAdapter);
-                progressBar.setVisibility(View.INVISIBLE);
+                animationView.setVisibility(View.INVISIBLE);
 
             }
 
@@ -72,7 +73,7 @@ public class HomeFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
 
                 Toast.makeText(getContext(), "Something Wrong", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.VISIBLE);
+                animationView.setVisibility(View.VISIBLE);
 
             }
         });

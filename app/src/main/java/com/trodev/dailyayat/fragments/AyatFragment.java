@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +35,8 @@ public class AyatFragment extends Fragment {
     private DatabaseReference reference, dbRef;
     private ProgressBar progressBar;
 
+    LottieAnimationView animationView;
+
 
     public AyatFragment() {
         // Required empty public constructor
@@ -48,9 +51,8 @@ public class AyatFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_ayat, container, false);
 
         ayatRv = view.findViewById(R.id.ayatRv);
-
-        progressBar = view.findViewById(R.id.progress_circular);
-        progressBar.setVisibility(View.VISIBLE);
+        animationView = view.findViewById(R.id.animationView);
+        animationView.loop(true);
 
         reference = FirebaseDatabase.getInstance().getReference().child("Daily Ayahs");
 
@@ -68,14 +70,12 @@ public class AyatFragment extends Fragment {
                 list1 = new ArrayList<>();
                 if(!dataSnapshot.exists())
                 {
-                    // progressDialog.show();
                     ayatRv.setVisibility(View.VISIBLE); // change
                 }
                 else
                 {
-                    // progressDialog.hide();
                     ayatRv.setVisibility(View.VISIBLE);
-                    progressBar.setVisibility(View.INVISIBLE);
+                    animationView.setVisibility(View.INVISIBLE);
                     for (DataSnapshot snapshot: dataSnapshot.getChildren()){
                         UploadAllAyats data = snapshot.getValue(UploadAllAyats.class);
                         list1.add(0,data);
@@ -89,11 +89,17 @@ public class AyatFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // progressDialog.hide();
-                progressBar.setVisibility(View.VISIBLE);
+                animationView.setVisibility(View.VISIBLE);
                 Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void setProgressBarVisibility(int visibility) {
+        // If a user returns back, a NPE may occur if WebView is still loading a page and then tries to hide a ProgressBar.
+        if (animationView != null) {
+            animationView.setVisibility(visibility);
+        }
     }
 
 }

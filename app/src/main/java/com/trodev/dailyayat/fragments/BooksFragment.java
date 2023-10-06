@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +32,7 @@ public class BooksFragment extends Fragment {
     DatabaseReference reference;
     ArrayList<BooksModel> model;
     BooksAdapter adapter;
+    LottieAnimationView animationView;
 
     public BooksFragment() {
         // Required empty public constructor
@@ -44,8 +46,8 @@ public class BooksFragment extends Fragment {
 
         /*init views*/
         recyclerView = view.findViewById(R.id.recyclerView);
-        progressBar = view.findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.VISIBLE);
+        animationView = view.findViewById(R.id.animationView);
+        animationView.loop(true);
 
         loadBooks();
 
@@ -73,15 +75,12 @@ public class BooksFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
-                    progressBar.setVisibility(View.GONE);
-
+                    animationView.setVisibility(View.GONE);
                     BooksModel govtModel = dataSnapshot.getValue(BooksModel.class);
                     model.add(0, govtModel);
                 }
 
                 adapter.notifyDataSetChanged();
-
             }
 
             @Override

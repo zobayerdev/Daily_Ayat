@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         }
         switch (item.getItemId()) {
             case R.id.nav_notification:
-                Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "নোটিফিকেশন", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, FullNotificationActivity.class));
                 break;
 
@@ -143,14 +143,14 @@ public class MainActivity extends AppCompatActivity {
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                 dialog.getWindow().setGravity(Gravity.BOTTOM);
-                Toast.makeText(this, "Developer", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "ডেভেলপার", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_apps:
-                Toast.makeText(this, "Our all application", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "আমাদের সকল অ্যাপ", Toast.LENGTH_SHORT).show();
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
-                    Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "আমাদের সকল অ্যাপ", Toast.LENGTH_SHORT).show();
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
                 }
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.nav_policy:
                 startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
-                Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "প্রাইভেসি পলিসি", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -49,4 +49,8 @@ dependencies {
 
     /*one-signal push notification*/
     implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    /*lottie animation*/
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }

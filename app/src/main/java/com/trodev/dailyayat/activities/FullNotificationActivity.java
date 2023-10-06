@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,8 +30,7 @@ public class FullNotificationActivity extends AppCompatActivity {
     private List<NotificationData> list1;
     private NotificationAdapter adapter;
     private DatabaseReference reference, dbRef;
-    private ProgressBar progressBar;
-
+    LottieAnimationView animationView;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,9 @@ public class FullNotificationActivity extends AppCompatActivity {
 
         notiRv = findViewById(R.id.notiRv);
 
-        progressBar = findViewById(R.id.progress_circular);
-        progressBar.setVisibility(View.VISIBLE);
+        /*animation view*/
+        animationView = findViewById(R.id.animationView);
+        animationView.loop(true);
 
         reference = FirebaseDatabase.getInstance().getReference().child("Notifications");
 
@@ -72,14 +73,14 @@ public class FullNotificationActivity extends AppCompatActivity {
                     notiRv.setLayoutManager(new LinearLayoutManager(FullNotificationActivity.this));
                     adapter = new NotificationAdapter(list1, FullNotificationActivity.this, "Notifications");
                     notiRv.setAdapter(adapter);
-                    progressBar.setVisibility(View.INVISIBLE);
+                    animationView.setVisibility(View.INVISIBLE);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
-                progressBar.setVisibility(View.VISIBLE);
+                animationView.setVisibility(View.VISIBLE);
                 Toast.makeText(FullNotificationActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
