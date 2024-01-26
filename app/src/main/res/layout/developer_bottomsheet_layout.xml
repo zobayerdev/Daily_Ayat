@@ -76,17 +76,7 @@
                         android:text="👩‍💻Software Quality Assurance (SQA):\n              Jubayer Hossain \n              Software Quality Assurance \n              Engineer of Trodev"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/trebuc"
-                        android:text="👩‍💻Junior Developer:\n              Md. Pias Miah \n              Software  Developer \n              of Trodev "
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
+                    
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
