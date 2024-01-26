@@ -133,6 +133,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, FullNotificationActivity.class));
                 break;
 
+            case R.id.nav_setting:
+                Toast.makeText(this, "সেটিং", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                break;
+
             case R.id.nav_developer:
                 final Dialog dialog = new Dialog(this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

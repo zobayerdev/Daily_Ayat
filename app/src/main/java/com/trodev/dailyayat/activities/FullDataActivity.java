@@ -5,7 +5,9 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -93,6 +95,21 @@ public class FullDataActivity extends AppCompatActivity {
             }
         });
 
+        applyTextSize();
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        applyTextSize();
+    }
+
+    private void applyTextSize() {
+        SharedPreferences sharedPreferences = getSharedPreferences("AppSettingsPrefs", 0);
+        int textSize = sharedPreferences.getInt("TextSize", 20);
+        headTv.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+    }
+
 
 }

@@ -3,6 +3,7 @@ package com.trodev.dailyayat.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,6 +76,14 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.slider));
 
     }
+
+    private void applyTextSize(String text)
+    {
+
+
+    }
+
+
 
     @Override
     public int getItemCount() {

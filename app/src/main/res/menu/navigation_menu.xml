@@ -9,6 +9,11 @@
         android:title="নোটিফিকেশন" />
 
     <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/settings"
+        android:title="সেটিং" />
+
+    <item
         android:id="@+id/nav_developer"
         android:icon="@drawable/ic_developer"
         android:title="ডেভেলপার" />
