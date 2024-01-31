@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.trodev.dailyayat.R;
 
-public class DetailsAyatActivity extends AppCompatActivity {
+public class DetailsHadisActivity extends AppCompatActivity {
 
     private ImageView copyIv, shareIv;
     private TextView ayahTv, authorTv, headTv, dateTv;
@@ -26,7 +26,7 @@ public class DetailsAyatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details_ayat);
+        setContentView(R.layout.activity_hadis_ayat);
 
         // action bar title
         getSupportActionBar().setTitle("সম্পূর্ণ দেখুন");
@@ -48,10 +48,10 @@ public class DetailsAyatActivity extends AppCompatActivity {
         date = intent.getStringExtra("date");
 
         /*set data in this id*/
-        ayahTv.setText("বর্ণনাঃ " + name);
-        authorTv.setText("উৎসঃ " + author);
-        headTv.setText("আয়াতঃ " + head);
-        dateTv.setText("প্রকাশিত তারিখঃ " + date);
+        headTv.setText("হাদিসঃ- " + head);
+        ayahTv.setText("হাদিস বর্ণনাঃ- " + name);
+        authorTv.setText("উৎসঃ- " + author);
+        dateTv.setText("প্রকাশিত তারিখঃ- " + date);
 
         copyIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +59,7 @@ public class DetailsAyatActivity extends AppCompatActivity {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("Copied Text", headTv.getText().toString().trim() + "\n" + ayahTv.getText().toString().trim() + "\n" + authorTv.getText().toString().trim() + "\n\n" + "Daily Ayah App টি এখনি ডাউনলোড করুন গুগল প্লে- স্টোর থেকে");
                 clipboard.setPrimaryClip(clip);
-                Toast.makeText(DetailsAyatActivity.this, "কপি সম্পন্ন হয়েছে", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailsHadisActivity.this, "কপি সম্পন্ন হয়েছে", Toast.LENGTH_SHORT).show();
             }
         });
 

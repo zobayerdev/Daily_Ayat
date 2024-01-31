@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.trodev.dailyayat.activities.DetailsAyatActivity;
+import com.trodev.dailyayat.activities.DetailsHadisActivity;
 import com.trodev.dailyayat.R;
 import com.trodev.dailyayat.models.UploadAllAyats;
 
@@ -51,7 +51,7 @@ public class AyatAdapter extends RecyclerView.Adapter<AyatAdapter.AyatViewAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DetailsAyatActivity.class);
+                Intent intent = new Intent(context, DetailsHadisActivity.class);
                 intent.putExtra("headline", item.getHeadline());
                 intent.putExtra("ayat", item.getAyat());
                 intent.putExtra("author", item.getAuthor());

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
     android:layout_margin="20dp"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".activities.SettingsActivity">
 
@@ -13,28 +13,27 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
         android:fontFamily="@font/kalpurush"
-        android:text="ফন্টের সাইজ ঠিক করে নিন"
+        android:text="@string/setting_text_1"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <SeekBar
         android:id="@+id/seekBarTextSize"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:max="30"
         android:progress="15"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:progressBackgroundTint="@color/black"
         android:scaleX="1.5"
         android:scaleY="1.5"
-        android:thumb="@drawable/circle"
-        />
+        android:thumb="@drawable/circle" />
 
 
 </LinearLayout>

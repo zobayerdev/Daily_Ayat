@@ -24,7 +24,9 @@
             android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name=".islamic_books.BooksViewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".islamic_books.BooksActivity"
+            />
         <activity
             android:name=".islamic_books.BooksActivity"
             android:exported="false" />
@@ -45,7 +47,7 @@
             android:exported="false"
             android:parentActivityName=".activities.MainActivity" />
         <activity
-            android:name=".activities.DetailsAyatActivity"
+            android:name=".activities.DetailsHadisActivity"
             android:exported="false"
             android:parentActivityName=".activities.MainActivity" />
         <activity

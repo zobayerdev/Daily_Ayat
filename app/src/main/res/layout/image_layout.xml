@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/kalpurush"
-                    android:text="Ayat"
+                    android:text="@string/ayat"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -86,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
-                    android:text="Author"
+                    android:text="@string/author"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />

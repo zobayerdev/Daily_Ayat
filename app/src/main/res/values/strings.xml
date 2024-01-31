@@ -13,6 +13,10 @@
     <string name="ceo_details"><b>Md. Zobayer Hasan Nayem (Founder and CEO)</b></string>
     <string name="mobile_number"><b>Contact Number:</b>+8801615257555, +8801925671797 (Office)</string>
     <string name="slogan">নিয়মিত আয়াত পড়ুন \nজীবনকে সুন্দর ভাবে গড়ে তুলুন .</string>
+    <string name="ayat">আয়াত</string>
+    <string name="author">কুরআনের কত নং আয়াত</string>
+    <string name="hadis">হাদিস:- </string>
+    <string name="hadis_author">কোন হাদিস থেকে বর্ণিত</string>
 
     <!--################-->
     <!--privacy policy text-->
@@ -24,4 +28,5 @@
     <string name="sixth_heading"><b>\nConsent</b>\nBy using our app, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting_text_1">ফন্টের সাইজ ঠিক করে নিন (হেডলাইন)</string>
 </resources>

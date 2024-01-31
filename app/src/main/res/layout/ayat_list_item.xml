@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    android:id="@+id/cardView"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -18,8 +17,8 @@
             android:id="@+id/ayatIV"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="5dp"
             android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:src="@drawable/hadis_script" />
 
         <View
@@ -45,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/kalpurush"
-                    android:text="আয়াতঃ "
+                    android:text="@string/hadis"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -56,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/kalpurush"
-                    android:text="হেডলাইন"
+                    android:text=" হেডলাইন"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -75,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
-                    android:text="উৎসঃ "
+                    android:text="উৎসঃ- "
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -85,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
-                    android:text="Author"
+                    android:text="@string/hadis_author"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
